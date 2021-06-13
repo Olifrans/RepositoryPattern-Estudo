@@ -39,12 +39,13 @@ namespace RepositoryPattern_Estudo.Controllers
             string mgs = "";
             bool isSaved = _productManager.Add(product);
             if (isSaved)
+
             {
-                mgs = "Produto foi salvo";
+                mgs = "Produto salvo com sucesso";
             }
             else
             {
-                mgs = "Produto não foi salvo";
+                mgs = "Atenção erro ao cadastrar o produto";
             }
             ViewBag.Mgs = mgs;
             return View();
