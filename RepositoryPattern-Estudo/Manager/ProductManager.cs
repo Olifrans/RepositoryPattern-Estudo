@@ -11,11 +11,16 @@ using System.Threading.Tasks;
 
 namespace RepositoryPattern_Estudo.Manager
 {
-    public class ProductManager : CommonManager<Product>,IProductManager
+    public class ProductManager : CommonManager<Product>, IProductManager
     {
         public ProductManager(RepositoryPatternDbContex dbContext) : base(new ProductRepository(dbContext))
         {
 
+        }
+
+        public Product GetById(int id)
+        {
+            return GetFirstOrDefault(c => c.Id == id);
         }
     }
 }

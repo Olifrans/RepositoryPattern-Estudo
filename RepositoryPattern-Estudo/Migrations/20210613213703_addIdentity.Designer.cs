@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RepositoryPattern_Estudo.Data;
 
 namespace RepositoryPattern_Estudo.Migrations
 {
     [DbContext(typeof(RepositoryPatternDbContex))]
-    partial class RepositoryPatternDbContexModelSnapshot : ModelSnapshot
+    [Migration("20210613213703_addIdentity")]
+    partial class addIdentity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

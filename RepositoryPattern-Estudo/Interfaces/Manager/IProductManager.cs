@@ -9,5 +9,6 @@ namespace RepositoryPattern_Estudo.Interfaces.Manager
 {
     public interface IProductManager : ICommonManager<Product>
     {
+        Product GetById(int id);
     }
 }

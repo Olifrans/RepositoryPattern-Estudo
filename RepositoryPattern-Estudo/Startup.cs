@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RepositoryPattern_Estudo.Data;
+using RepositoryPattern_Estudo.Manager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,10 @@ namespace RepositoryPattern_Estudo
               options.UseSqlServer(
                   Configuration.GetConnectionString("RepoConnection")));
             //,b => b.MigrationsAssembly("OlifransShop.Web")));
+
+
+            //Dependency Injection in Asp Net Core MVC5
+            services.AddScoped<ProductManager>();
 
 
 
