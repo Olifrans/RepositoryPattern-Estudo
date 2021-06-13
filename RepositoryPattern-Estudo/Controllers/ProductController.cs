@@ -24,8 +24,6 @@ namespace RepositoryPattern_Estudo.Controllers
          */
 
 
-
-
         //Contexto do BD Dependency Injection in Asp Net Core MVC5
         private ProductManager _productManager;
         public ProductController(ProductManager productManager)
